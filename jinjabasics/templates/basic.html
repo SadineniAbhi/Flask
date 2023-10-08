@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello</title>
+</head>
+<body>
+    <h1>Hello {{name}}</h1>
+    <ul>
+        {% for item in letters %}
+            <li>{{item}}</li>
+        {% endfor %}
+    </ul>
+
+    {% if "a" in letters %}
+        <p>found you a</p>
+    {%else%} 
+        <p>didn't find</p>       
+    {% endif %}
+</body>
+</html>
