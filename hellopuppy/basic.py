@@ -10,5 +10,9 @@ def hello():
 def info():
     return "<h1>puppies are cute</h1>"
 
+@app.route("/hello/<name>")
+def droute(name):
+    return "<h1>Hello {}!!</h1>".format(name)
+
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
