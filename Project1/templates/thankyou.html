@@ -1,0 +1,14 @@
+{% extends 'basic.html' %}
+
+{% block content %}
+    <div class="container-fluid bg-dark text-light p-5">
+        <div class="container bg-dark p-5">
+           {% if status %}
+            <h1>Thankyou for signingUp!!</h1>
+           {% else %}
+            <h2>Sorry Invalid username</h2>
+            <p>To try again click <a href="{{ url_for('signup' ) }}">here</a></p>
+           {% endif %}
+        </div>
+    </div>
+{% endblock %}

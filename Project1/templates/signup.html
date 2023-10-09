@@ -1,0 +1,53 @@
+{% extends 'basic.html' %}
+
+{% block content %}
+
+
+    <div class="container-fluid bg-dark text-light p-5">
+        <div class="container bg-dark p-5">
+            <h1 class="display-4">Signup Here!</h1>
+            <hr>
+           <form action="{{ url_for('thankyou' ) }}">
+            <div class="row g-2">
+                <div class="col-md">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputGrid" placeholder="First Name" required>
+                    <label for="floatingInputGrid">First Name</label>
+                  </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingInputGrid" placeholder="Last Name" required >
+                        <label for="floatingInputGrid">Last name</label>
+                </div>
+                </div>
+              <br>
+              <div class="row g-2">
+                <div class="col-md">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingInputGrid" placeholder="Username" name = "username" required>
+                    <label for="floatingInputGrid">Username</label>
+                  </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="floatingInputGrid" placeholder="password" required>
+                        <label for="floatingInputGrid">Password</label>
+                </div>
+                </div>
+              </div>
+              <div class="row g-2">
+                <div class="col-md">
+                    <input type="submit" value="submit">
+                </div>
+              </div>
+            </form>
+            <br>
+            <ul>
+              <p>Note: Username must contain the following</p>
+              <li>one capital letter</li>
+              <li>last digit must be number</li>
+              <li>one lowercase letter</li>
+            </ul>
+        </div>
+{% endblock %}
