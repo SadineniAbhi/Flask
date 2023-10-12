@@ -18,3 +18,10 @@ db = SQLAlchemy(app)
 
 #reads and updates the changes in the database design
 Migrate(app,db)
+
+class puppy(db.Model):
+    __tablename__ = "puppy"
+
+    id = db.Column(db.Integer,primary_key=True)
+    name = db.Column(db.Text)
+    toys = db.relationship("Toy",backref)
